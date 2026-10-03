@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Medical Diagnosis System</title>
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/home.css">
+
+    <script defer src="js/main.js"></script>
+</head>
+<body>
+
+<!-- NAVBAR (SAME AS HOME & TOOL) -->
+<nav class="navbar">
+    <div class="logo">🧠 AI MedDx</div>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="tool.html">Diagnosis Tool</a></li>
+        <li><a href="settings.html" class="active">Settings</a></li>
+    </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-text">
+        <h1>AI Medical Diagnosis System</h1>
+
+        <p class="hero-desc">
+            An advanced AI-powered healthcare assistant designed to analyze
+            <b>Chest X-rays</b>, <b>Brain MRI scans</b>, and <b>Bone X-rays</b>
+            to assist in early detection of critical medical conditions.
+        </p>
+
+        <div class="badges">
+            <span>AI Powered</span>
+            <span>Deep Learning</span>
+            <span>Medical Imaging</span>
+            <span>Educational Use</span>
+        </div>
+
+        <a href="tool.html" class="cta-btn">Start Diagnosis</a>
+    </div>
+
+    <div class="hero-image">
+        <img src="assets/Robo_doc.jpg" alt="AI Medical Assistant">
+    </div>
+</section>
+
+<!-- WHAT TOOL DOES -->
+<section class="section light">
+    <h2>🩺 What Does This Tool Do?</h2>
+    <p class="section-text">
+        This platform uses <b>Deep Learning models</b> trained on real-world
+        medical imaging datasets to analyze uploaded scans and provide
+        AI-assisted diagnostic insights.
+    </p>
+
+    <div class="features">
+        <div class="feature-card">
+            <h3>🫁 Chest X-ray Analysis</h3>
+            <p>
+                Detects signs of <b>Pneumonia</b> by identifying abnormal lung
+                patterns using a Convolutional Neural Network (CNN).
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <h3>🧠 Brain MRI Analysis</h3>
+            <p>
+                Classifies brain tumors such as <b>Glioma</b>, <b>Meningioma</b>,
+                <b>Pituitary Tumor</b>, or <b>No Tumor</b>.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <h3>🦴 Bone Fracture Detection</h3>
+            <p>
+                Analyzes bone X-rays to identify possible fractures and assists
+                in early orthopedic assessment.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- HOW AI WORKS -->
+<section class="section">
+    <h2>🤖 How Does the AI Work?</h2>
+    <p class="section-text">
+        The system uses <b>Convolutional Neural Networks (CNNs)</b>, a class of
+        deep learning models specially designed for image recognition tasks.
+    </p>
+
+    <ul class="steps">
+        <li>📥 User uploads a medical scan</li>
+        <li>🧼 Image is preprocessed (resizing, normalization)</li>
+        <li>🧠 CNN extracts medical features from the image</li>
+        <li>📊 Model predicts disease class with confidence score</li>
+        <li>💬 AI assistant explains next steps and precautions</li>
+    </ul>
+</section>
+
+<!-- TECHNOLOGY STACK -->
+<section class="section light">
+    <h2>🛠️ Technology Stack</h2>
+
+    <div class="tech-grid">
+        <div>Python (Flask)</div>
+        <div>TensorFlow & Keras</div>
+        <div>HTML, CSS, JavaScript</div>
+        <div>Deep Learning (CNN)</div>
+        <div>Medical Imaging Datasets</div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section">
+    <h2>👨‍💻 About This Project</h2>
+    <p class="section-text">
+        This project was developed as an educational and research-based
+        initiative to explore the real-world applications of
+        <b>Artificial Intelligence in Healthcare</b>.
+    </p>
+
+    <p class="section-text">
+        Built with a focus on usability, explainability, and practical AI
+        deployment, this system demonstrates how machine learning models can
+        assist — not replace — medical professionals.
+    </p>
+</section>
+
+<!-- DISCLAIMER -->
+<section class="section disclaimer">
+    <h3>⚠️ Disclaimer</h3>
+    <p>
+        This system is intended for <b>educational and demonstration purposes only</b>.
+        It does not replace professional medical diagnosis or treatment.
+        Always consult a qualified healthcare professional.
+    </p>
+</section>
+
+</body>
+</html>

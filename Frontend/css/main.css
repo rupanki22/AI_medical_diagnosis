@@ -1,0 +1,185 @@
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* ================= THEME VARIABLES ================= */
+:root {
+    --accent: #0b5ed7;
+
+    --bg: #f6f8fb;
+    --card: #ffffff;
+    --text: #1f2937;
+    --muted: #6b7280;
+    --border: rgba(0,0,0,0.06);
+}
+
+/* ================= DARK MODE VARIABLES ================= */
+html.dark {
+    --bg: #0f172a;
+    --card: #020617;
+    --text: #e5e7eb;
+    --muted: #9ca3af;
+    --border: rgba(255,255,255,0.08);
+}
+
+/* ================= BODY ================= */
+body {
+    background: var(--bg);
+    color: var(--text);
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+    width: 100%;
+    background: var(--card);
+    padding: 16px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--accent);
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 15px;
+    color: var(--text);
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-links a.active {
+    color: var(--accent);
+    font-weight: 600;
+}
+
+/* underline animation */
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: var(--accent);
+    left: 0;
+    bottom: -6px;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+}
+
+/* ================= SECTIONS ================= */
+section {
+    width: 100%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 60px;
+}
+
+/* ================= HEADINGS ================= */
+h1, h2, h3, h4 {
+    color: var(--text);
+}
+
+p {
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+/* ================= CARDS ================= */
+.card,
+.tool-card,
+.settings-card {
+    background: var(--card);
+    border-radius: 14px;
+    padding: 22px;
+    border: 1px solid var(--border);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    transition: background 0.3s ease, border 0.3s ease;
+}
+
+/* ================= BUTTONS ================= */
+button,
+.primary-btn {
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-1px);
+    opacity: 0.9;
+}
+
+/* ================= TEXT HELPERS ================= */
+.subtitle,
+.disclaimer {
+    color: var(--muted);
+}
+
+/* ================= CHAT ================= */
+.bot {
+    background: var(--card);
+    color: var(--text);
+    border: 1px solid var(--border);
+}
+
+/* ================= FORM ELEMENTS ================= */
+input,
+select {
+    background: var(--card);
+    color: var(--text);
+    border: 1px solid var(--border);
+}
+
+input::file-selector-button {
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+    .navbar {
+        padding: 14px 25px;
+    }
+
+    .container {
+        padding: 30px 25px;
+    }
+}

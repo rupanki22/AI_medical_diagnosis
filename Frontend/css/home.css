@@ -1,0 +1,139 @@
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 90px 60px;
+    background: linear-gradient(135deg, #ffffff, #eef3ff);
+}
+
+.hero-text {
+    max-width: 55%;
+    animation: fadeUp 1s ease;
+}
+
+.hero-text h1 {
+    font-size: 40px;
+    color: #0b5ed7;
+    margin-bottom: 20px;
+}
+
+.hero-desc {
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.badges span {
+    display: inline-block;
+    background: #e7efff;
+    color: #0b5ed7;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    margin-right: 8px;
+    margin-bottom: 10px;
+}
+
+.cta-btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 14px 30px;
+    background: #0b5ed7;
+    color: #fff;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.cta-btn:hover {
+    background: #084298;
+    transform: translateY(-2px);
+}
+
+.hero-image img {
+    width: 320px;
+    animation: float 3s ease-in-out infinite;
+}
+
+/* SECTIONS */
+.section {
+    padding: 70px 60px;
+}
+
+.section.light {
+    background: #f6f8fb;
+}
+
+.section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #0b5ed7;
+}
+
+.section-text {
+    font-size: 16px;
+    line-height: 1.8;
+    max-width: 800px;
+    margin-bottom: 30px;
+}
+
+/* FEATURES */
+.features {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.feature-card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    flex: 1;
+    min-width: 250px;
+}
+
+/* STEPS */
+.steps {
+    list-style: none;
+    font-size: 16px;
+}
+
+.steps li {
+    margin-bottom: 10px;
+}
+
+/* TECH STACK */
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+}
+
+.tech-grid div {
+    background: #ffffff;
+    padding: 14px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 14px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.05);
+}
+
+/* DISCLAIMER */
+.disclaimer {
+    background: #fff3cd;
+    border-top: 1px solid #ffeeba;
+}
+
+/* ANIMATIONS */
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+    100% { transform: translateY(0); }
+}

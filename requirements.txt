@@ -1,0 +1,8 @@
+tensorflow==2.16.1
+numpy==1.26.4
+opencv-python
+flask
+flask-cors
+matplotlib
+scikit-learn
+# python 3.10.11

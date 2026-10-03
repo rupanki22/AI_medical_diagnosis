@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diagnosis Tool | AI MedDx</title>
+
+    <!-- COMMON + TOOL CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/tool.css">
+
+    <!-- COMMON JS (THEME / NAVBAR / SETTINGS SYNC) -->
+    <script defer src="js/main.js"></script>
+
+    <!-- TOOL LOGIC -->
+    <script defer src="js/tool.js"></script>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="logo">🧠 AI MedDx</div>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="tool.html" class="active">Diagnosis Tool</a></li>
+        <li><a href="settings.html">Settings</a></li>
+    </ul>
+</nav>
+
+<!-- TOOL HEADER -->
+<section class="tool-hero">
+    <h1>Medical Scan Analysis Tool</h1>
+    <p>
+        Upload <b>X-rays</b> or <b>MRI scans</b> and receive
+        <b>AI-assisted diagnosis</b> with confidence scores and medical guidance.
+    </p>
+</section>
+
+<!-- TOOL MAIN -->
+<section class="tool-container">
+
+    <!-- LEFT PANEL -->
+    <div class="tool-left">
+
+        <!-- SCAN TYPE -->
+        <div class="tool-card">
+            <h3>Select Scan Type</h3>
+            <div class="radio-group">
+                <label>
+                    <input type="radio" name="scan" value="chest" checked>
+                    Chest X-ray (Pneumonia)
+                </label>
+                <label>
+                    <input type="radio" name="scan" value="brain">
+                    Brain MRI (Tumor)
+                </label>
+                <label>
+                    <input type="radio" name="scan" value="bone">
+                    Bone X-ray (Fracture)
+                </label>
+            </div>
+        </div>
+
+        <!-- UPLOAD -->
+        <div class="tool-card">
+            <h3>Upload Medical Image</h3>
+            <input type="file" id="imageUpload" accept="image/*">
+            <img id="preview" hidden>
+        </div>
+
+        <!-- AI LOADER (HIDDEN BY DEFAULT) -->
+        <div id="aiLoader" class="ai-loader" hidden>
+            <div class="spinner"></div>
+            <p>AI is analyzing the scan…</p>
+        </div>
+
+        <!-- RESULT -->
+        <div class="tool-card result-card" id="resultCard" hidden>
+            <h3>Diagnosis Result</h3>
+            <p id="resultText"></p>
+            <button class="primary-btn" onclick="findHospital()">
+                Find Nearest Hospital
+            </button>
+        </div>
+
+        <p class="disclaimer">
+            ⚠️ This tool is for educational purposes only.
+            Always consult a certified medical professional.
+        </p>
+
+    </div>
+
+    <!-- RIGHT PANEL -->
+    <div class="tool-right">
+
+        <h3>AI Health Assistant</h3>
+
+        <div class="chat-window" id="chatWindow">
+            <div class="bot">Hello 👋 I am your AI health assistant.</div>
+            <div class="bot">Upload a scan to receive medical guidance.</div>
+        </div>
+
+        <div class="chat-options" id="chatOptions" hidden>
+            <button onclick="ask('next')">What should I do now?</button>
+            <button onclick="ask('serious')">Is this serious?</button>
+            <button onclick="ask('cure')">Can it be cured?</button>
+            <button onclick="ask('precaution')">Precautions</button>
+            <button onclick="ask('food')">Diet recommendations</button>
+            <button onclick="ask('recovery')">Recovery time</button>
+            <button onclick="findHospital()">Nearest hospital</button>
+        </div>
+
+    </div>
+
+</section>
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Settings | AI MedDx</title>
+
+    <!-- COMMON CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/settings.css">
+
+    <!-- COMMON JS (THEME / ACCENT / FONT SYNC) -->
+    <script defer src="js/main.js"></script>
+
+    <!-- SETTINGS PAGE LOGIC -->
+    <script defer src="js/settings.js"></script>
+</head>
+<body>
+
+<!-- NAVBAR (SAME AS HOME & TOOL) -->
+<nav class="navbar">
+    <div class="logo">🧠 AI MedDx</div>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="tool.html">Diagnosis Tool</a></li>
+        <li><a href="settings.html" class="active">Settings</a></li>
+    </ul>
+</nav>
+
+<!-- SETTINGS CONTAINER -->
+<section class="settings-container">
+
+    <h1>⚙️ Application Settings</h1>
+    <p class="subtitle">Customize your experience</p>
+
+    <!-- THEME MODE -->
+    <div class="settings-card">
+        <h3>🎨 Theme Mode</h3>
+
+        <label>
+            <input type="radio" name="theme" value="light">
+            Light Theme
+        </label>
+
+        <label>
+            <input type="radio" name="theme" value="dark">
+            Black Theme
+        </label>
+    </div>
+
+    <!-- ACCENT COLOR -->
+    <div class="settings-card">
+        <h3>🌈 Accent Color</h3>
+
+        <div class="color-options">
+            <span class="color blue" data-color="#0b5ed7" title="Blue"></span>
+            <span class="color green" data-color="#198754" title="Green"></span>
+            <span class="color purple" data-color="#6f42c1" title="Purple"></span>
+            <span class="color red" data-color="#dc3545" title="Red"></span>
+        </div>
+    </div>
+
+    <!-- FONT SIZE -->
+    <div class="settings-card">
+        <h3>🔠 Font Size</h3>
+
+        <select id="fontSize">
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+        </select>
+    </div>
+
+    <!-- CHATBOT SOUND -->
+    <div class="settings-card">
+        <h3>🔊 Chatbot Sound</h3>
+
+        <label class="switch">
+            <input type="checkbox" id="chatSound">
+            <span class="slider"></span>
+        </label>
+
+        <span>Enable chatbot sound</span>
+    </div>
+
+    <!-- RESET -->
+    <div class="settings-card danger">
+        <button id="resetSettings">Reset to Default</button>
+    </div>
+
+</section>
+
+</body>
+</html>

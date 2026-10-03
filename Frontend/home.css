@@ -1,0 +1,132 @@
+/* ---------- HERO ---------- */
+.hero {
+    min-height: 85vh;
+    padding: 60px 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(
+        135deg,
+        #ffffff,
+        #f0f6ff
+    );
+}
+
+.hero-text {
+    max-width: 55%;
+}
+
+.hero-text h1 {
+    font-size: 36px;
+    color: #0b5ed7;
+    margin-bottom: 15px;
+}
+
+.hero-text p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.hero-text .sub {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+.hero-image img {
+    width: 260px;
+    animation: float 4s ease-in-out infinite;
+}
+
+/* ---------- BUTTON ---------- */
+.primary-btn {
+    margin-top: 25px;
+    padding: 12px 26px;
+    border-radius: 30px;
+    border: none;
+    background: #0b5ed7;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.primary-btn:hover {
+    transform: scale(1.05);
+    background: #084298;
+}
+
+/* ---------- INFO SECTION ---------- */
+.info {
+    padding: 60px 80px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    background: #f6f8fb;
+}
+
+.info-card {
+    background: white;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+
+/* ---------- ANIMATIONS ---------- */
+.animate-left {
+    animation: slideLeft 1s ease forwards;
+}
+
+.animate-right {
+    animation: slideRight 1s ease forwards;
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeUp 1s ease forwards;
+}
+
+.delay {
+    animation-delay: 0.3s;
+}
+
+.delay2 {
+    animation-delay: 0.6s;
+}
+
+@keyframes slideLeft {
+    from { opacity: 0; transform: translateX(-40px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideRight {
+    from { opacity: 0; transform: translateX(40px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 1000px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text {
+        max-width: 100%;
+    }
+
+    .info {
+        grid-template-columns: 1fr;
+    }
+}
